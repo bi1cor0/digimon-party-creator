@@ -13,6 +13,9 @@ export default function App() {
         const response = await fetch(
           `https://digi-api.com/api/v1/digimon/${searchTerm}`
         );
+        if (!response.ok){ //if statement that checks to see if the response was successful and sends out a boolean to show if it was or not. 
+          throw new Error('Digimon not found') //throws out a new error if response.ok is false. 
+        }
         // Parse JSON response into a JavaScript object
         const data = await response.json();
         // Set the Movie state to the received data
