@@ -21,8 +21,8 @@ export default function App() {
   return (
       <>
         <div className='App'>
-          <Form />
-          <DigiDisplay />
+          <Form digisearch={getDigimon}/>
+          <DigiDisplay digimon={digimon}/>
         </div>
       </>
     )
