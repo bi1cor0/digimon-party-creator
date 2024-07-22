@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom'; //importing methods from react-router-dom
 import DigiDisplay from './components/DigiDisplay'
 import Form from './components/Form'
+import ErrorPage from './pages/ErrorPage';
 
 export default function App() {
   const [digimon, setDigimon] = useState(null)
+  const navigate = useNavigate() //calling the useNavigate method for when a button is pushed, or an error is thrown.
 
     // Function to get Digimon names
     const getDigimon = async(searchTerm) => {
@@ -20,17 +22,24 @@ export default function App() {
         const data = await response.json();
         // Set the Movie state to the received data
         setDigimon(data);
-      } catch(e){
+      } catch(e){ //catch statement for the error handling. 
         console.error(e);
+        navigate('/error' , { state: {message: e.message}}) //having the user go to the error page using the useNavigate function and passing through an object prop that details the message. 
       }
     }
 
   return (
       <>
+      <Routes>
+        <Route path="/" element={
         <div>
           <Form digisearch={getDigimon}/>
-          <DigiDisplay digimon={digimon}/>
+          <DigiDisplay digimon={digimon}/> 
         </div>
+        } />
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
+
       </>
     )
   }
