@@ -1,8 +1,13 @@
 import React from 'react'
 
 
-export default function Form() {
+export default function Form(props) {
   return (
-    <div>Form</div>
+    <div>
+        <form>
+            <input type="text"/>
+            <input type='submit' value='submit'/>
+        </form>
+    </div>
   )
 }
