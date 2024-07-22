@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import DigiDisplay from './components/DigiDisplay'
 import Form from './components/Form'
 
@@ -27,7 +27,7 @@ export default function App() {
 
   return (
       <>
-        <div className='App'>
+        <div>
           <Form digisearch={getDigimon}/>
           <DigiDisplay digimon={digimon}/>
         </div>
