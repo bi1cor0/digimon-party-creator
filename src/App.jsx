@@ -24,7 +24,7 @@ export default function App() {
         setDigimon(data);
       } catch(e){ //catch statement for the error handling. 
         console.error(e);
-        navigate('/error' , { state: {message: e.message}}) //having the user go to the error page using the useNavigate function and passing through an object prop that details the message. 
+        navigate('/error') //having the user go to the error page using the useNavigate function. 
       }
     }
 
