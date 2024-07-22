@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom'; //importing metho
 import DigiDisplay from './components/DigiDisplay'
 import Form from './components/Form'
 import ErrorPage from './pages/ErrorPage';
+import './styles.css'
 
 
 function randomIntFromInterval(min, max) { // incorporating random number generator to use in the use state below. 
