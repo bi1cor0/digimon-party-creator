@@ -9,7 +9,7 @@ export default function DigiDisplay({ digimon }) {
         };
 
         const loading = () => {
-            return <h1>No Digimon to Show</h1>
+            return <h3>No Digimon to Show</h3>
         }
         return digimon ? loaded() : loading();
   }

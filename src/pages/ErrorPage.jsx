@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export default function ErrorPage() {
     const navigate = useNavigate();
 
-    const btnBack = () => {
+    const btnBack = () => { //created variable that returns a function that will navigate back to the main page.
         navigate('/');
     };
   return (
