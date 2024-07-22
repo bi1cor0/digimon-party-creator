@@ -8,15 +8,19 @@ export default function App() {
 
     // Function to get Digimon names
     const getDigimon = async(searchTerm) => {
-      // Make fetch request and store the response
-      const response = await fetch(
-        `https://digi-api.com/api/v1/digimon/${searchTerm}`
-      );
-      // Parse JSON response into a JavaScript object
-      const data = await response.json();
-      // Set the Movie state to the received data
-      setDigimon(data);
-    };
+      try {
+        // Make fetch request and store the response
+        const response = await fetch(
+          `https://digi-api.com/api/v1/digimon/${searchTerm}`
+        );
+        // Parse JSON response into a JavaScript object
+        const data = await response.json();
+        // Set the Movie state to the received data
+        setDigimon(data);
+      } catch(e){
+        console.error(e);
+      }
+    }
 
   return (
       <>
