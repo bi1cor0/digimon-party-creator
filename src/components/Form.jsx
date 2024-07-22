@@ -25,7 +25,7 @@ export default function Form(props) {
         <>
         <h1>Welcome to the Digimon Search and Info Application!</h1>
         <h3>Wondering what Digimon are? Here's a handy link: 
-        <a href="https://wikimon.net/Digimon_(species)r" target="_blank"> Wikimon: The Digimon Wiki</a>
+        <a href="https://wikimon.net/Digimon_(species)" target="_blank"> Wikimon: The Digimon Wiki</a>
         </h3>
         <h4>This application uses the Digimon API or DAPI and serves as an introduction into what the Digimon are.</h4>
         <h4>Please go ahead and search for any Digimon you are curious about. Or if you don't know any Digimon, go ahead and enter in a number from 1 to 1460!</h4>
